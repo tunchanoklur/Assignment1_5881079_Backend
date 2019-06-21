@@ -26,10 +26,13 @@ app.get('/contacts/getMany',function(req,res){
 app.post('/contacts/update',function(req,res){
     let para = req.body
     let MongoClient = require('mongodb').MongoClient
+    para.criteria._id = new mongodb.ObjectID(para.criteria._id)
+    console.log(para.criteria)
+    console.log(para.data)
     MongoClient.connect(url, function(error,db){
         if(error) throw error
         let dbo = db.db("Assignment1_5881079")
-            dbo.collection("Users").updateMany(para.criteria,para.data,function(e,res_){
+            dbo.collection("Users").updateOne(para.criteria,para.data,function(e,res_){
             if(e) throw e
             console.log(res_.modifiedCount+" item(s) updated")
             db.close()
