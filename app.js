@@ -6,8 +6,8 @@ var cors = require('cors')
 
 app.use(cors())
 app.use(body())
-const url = "mongodb://localhost:27017/"
-
+// const url = "mongodb://localhost:27017/"
+const url = "mongodb+srv://admin:admin@cluster0-2phal.gcp.mongodb.net/Assignment1_5881079?retryWrites=true&w=majority"
 //get many contacts
 app.get('/contacts/getMany',function(req,res){
     let MongoClient = require('mongodb').MongoClient
@@ -77,7 +77,9 @@ app.post('/contacts/delete',function(req,res){
     })
 })
 
-var server = app.listen(3000, function(){
+
+port = process.env.PORT || 3000
+var server = app.listen(port, function(){
     var host = server.address().address
     var port = server.address().port
     console.log("Application run at http://%s:%s", host, port)

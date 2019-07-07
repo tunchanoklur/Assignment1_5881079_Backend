@@ -1,0 +1,30 @@
+{
+  "name": "assignment1_5881079_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.2.7",
+    "vue-cli": "^2.9.6",
+    "vue-cli-plugin-vuetify": "^0.1.6",
+    "vuetify": "^1.5.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunchanoklur/Assignment1_5881079_Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tunchanoklur/Assignment1_5881079_Backend/issues"
+  },
+  "homepage": "https://github.com/tunchanoklur/Assignment1_5881079_Backend#readme"
+}
